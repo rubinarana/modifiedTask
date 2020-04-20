@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/profile','home');
+Route::view('/profile','profile'); 
