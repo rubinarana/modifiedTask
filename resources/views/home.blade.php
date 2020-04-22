@@ -142,9 +142,9 @@
                    <img src="image/profile1.png" class="img-fluid">
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-primary">Like</button>
-                          <button type="button" class="btn btn-primary">Comment</button>
-                          <button type="button" class="btn btn-primary">Share</button>
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
                         </div>
                     </div>
                   </div>
@@ -156,9 +156,9 @@
                    <img src="image/login.png" class="img-fluid">
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-primary">Like</button>
-                          <button type="button" class="btn btn-primary">Comment</button>
-                          <button type="button" class="btn btn-primary">Share</button>
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
                         </div>
                     </div>
                   </div>
@@ -170,9 +170,9 @@
                    <img src="image/profile.png" class="img-fluid">
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-primary">Like</button>
-                          <button type="button" class="btn btn-primary">Comment</button>
-                          <button type="button" class="btn btn-primary">Share</button>
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
                         </div>
                     </div>
                   </div>
@@ -185,9 +185,9 @@
                    <img src="image/profile1.png" class="img-fluid">
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-primary">Like</button>
-                          <button type="button" class="btn btn-primary">Comment</button>
-                          <button type="button" class="btn btn-primary">Share</button>
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
                         </div>
                     </div>
                   </div>
@@ -199,9 +199,9 @@
                    <img src="image/profile3.png" class="img-fluid">
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-primary">Like</button>
-                          <button type="button" class="btn btn-primary">Comment</button>
-                          <button type="button" class="btn btn-primary">Share</button>
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
                         </div>
                     </div>
                   </div>
@@ -223,10 +223,10 @@
       </script>
 
     <footer class="page-footer pt-4 bg-dark text-light">
-        <div class="container-fluid text-center text-md-left">
+        <div class="container text-center text-md-left">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
-                    <h3 class="text-center">ABOUT US</h3>
+                    <h3>ABOUT US</h3>
                     <p>
                        XYZ is a one of the social media connecting the people of different background. 
                        XYZ is having the feature of ease-use-interface. For any query and help please visit to mentioned useful links or directly contact with the customer care section. NOTE: Please only post geninue and related posts. If found temporarily suspended from this platform.
@@ -237,14 +237,15 @@
                     <h3>Useful Links</h3>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="#!" class=>Services</a>
+                        <a href="{{ route('services') }}" class=>Services</a>
                       </li>
                       <li>
-                        <a href="#!">Privacy and Policy</a>
+                        <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>
                       </li>
                       <li>
-                        <a href="#!">Terms and Conditions</a>
+                        <a href="{{ route('termcondition') }}">Terms and Conditions</a>
                       </li>
+                    </ul>
                   </div>
                  
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-3">
@@ -253,13 +254,13 @@
 
                     <ul class="list-unstyled">
                       <li>
-                        <a href="#!">Help</a>
+                        <a href="{{ route('help') }}">Help</a>
                       </li>
                       <li>
-                        <a href="#!">xyz@gmail.com</a>
+                        <a href="#">xyz@gmail.com</a>
                       </li>
                     <li>
-                        <a href="">Customer Care</a>
+                        <a href="{{ route('customercare') }}">Customer Care</a>
                     </li>
                     </ul>
                   </div>

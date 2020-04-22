@@ -31,58 +31,23 @@
               </div>
            </div>
       </nav>
-<div class="container login-container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  login-form-1 bg-dark shadow p-5 mb-5 bg-white rounded" style="background-color:#292b2c !important;">
-                    <h3 class="text-center text-light">Login</h3>
-                    <hr style="background-color: #FFFFFF";>
-                    <form>
-                        <div class="form-group">
-                            <i class="fa fa-envelope fa-2x text-light"></i>&nbsp;
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                        </div><br>
-                        <div class="form-group">
-                            <i class="fa fa-lock fa-2x text-light"></i>&emsp;
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                        </div><br>
-                        <div class="form-group">
-                            <button class="btn btn-outline-light">LOGIN</button>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 login-form-2 bg-light shadow p-5 mb-5 bg-white rounded" style="background-color:white; !important;">
-                    <h3 class="text-center">Create New</h3>
-                     <hr style="background-color: #000000";>
-                    <form>
-                        <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Gender *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Re-Enter Password *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <h6></h6>
-                        </div>
-                         <div class="form-group">
-                            <button class="btn btn-outline-secondary">SUBMIT</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div class="container mt-5">
+  <h3 class="text-center">Last updated: 04/ 22 / 2020 </h3>
+      <br>
+      <p>Please read these Terms and Conditions carefully before using the XYZ website.</p>
+      <br>
+      <p>&emsp;Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service. By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</p>
+      <br>
+      <p>&emsp;Our Service allows you to post, link, share and otherwise make available certain information, text, graphics, videos, or other material. You further acknowledge and agree that My Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+      <br>
+      <p>&emsp;We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+      <p>&emsp;Our Service allows you to post, link, share and otherwise make available certain information, text, graphics, videos, or other material. You further acknowledge and agree that My Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+      <br>
+      <p>&emsp;We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p> 
+      <br>
+      <p>If you have any questions about these Terms, please contact us.</p>
+
+</div>
 
         <footer class="page-footer pt-4 bg-dark text-light">
         <div class="container text-center text-md-left">
@@ -99,7 +64,7 @@
                     <h3>Useful Links</h3>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="{{ route('services') }}">Services</a>
+                        <a href="{{ route('services') }}" class=>Services</a>
                       </li>
                       <li>
                         <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>

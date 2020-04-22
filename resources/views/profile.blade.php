@@ -77,12 +77,12 @@
                     <h1 class="text-center">Rubina Rana</h1><br>
                          <div class="d-flex justify-content-center">
                              <i class="fa fa-map-marker fa-2x"></i>&emsp;&emsp;
-                                   <h6> Handigaun, Kathmandu</h6>
+                                   <p> Handigaun, Kathmandu</p>
                         </div><br>
 
                         <div class="d-flex justify-content-center">
                              <i class="fa fa-phone-square fa-2x"></i>&emsp;
-                                <h6>9860294884 / 9803208339</h6>
+                                <p>9860294884 / 9803208339</p>
                         </div><br>
                         
                          <div class="d-flex justify-content-center">
@@ -100,7 +100,7 @@
                             <button type="button" class="btn btn-danger">
                                 Following <span class="badge badge-light">7</span>
                             </button>
-                             <button type="button" class="btn btn-info">
+                             <button type="button" class="btn btn-info"><a href=""></a>
                                 Posts <span class="badge badge-light"></span>
                             </button>
                         </div>
@@ -109,11 +109,8 @@
             </div>
     </div>
    <hr><br>
-   <div>
-
-    
-
-<div class="footer" style="overflow: hidden;">
+<div class="section" style="overflow: hidden;">
+  <div class="container">
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="container">
@@ -123,7 +120,7 @@
         </div>
 
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-             <h2 style="text-align: center;">Connected With</h2>
+            <h2 style="text-align: center;">Connected With</h2>
             <div class="media">
                     <a href="https://www.facebook.com/rubina.magar.71" target="_blank"><i class="fa fa-facebook fa-3x"></i></a>
                     <a href="https://github.com/rubinarana" target="_blank"><i class="fa fa-github fa-3x"></i></a>
@@ -131,7 +128,130 @@
             </div>
         </div>
     </div>
+  </div>
 </div>
+<hr>
+ <div class="container">
+      <div class="row mt-5">
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+              <div class="container">
+                <div class="card">
+                  <div class="card-body text-center">
+                   <img src="image/profile1.png" class="img-fluid">
+                    <div class="card-footer mt-3">
+                        <div class="btn-group d-flex justify-content-between">
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                  <br><h5>Rubina</h5>
+                <div class="card">
+                  <div class="card-body text-center">
+                   <img src="image/login.png" class="img-fluid">
+                    <div class="card-footer mt-3">
+                        <div class="btn-group d-flex justify-content-between">
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                    <br><h5>Rubina</h5>
+                <div class="card">
+                  <div class="card-body text-center">
+                   <img src="image/profile.png" class="img-fluid">
+                    <div class="card-footer mt-3">
+                        <div class="btn-group d-flex justify-content-between">
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+             
+
+                  <br><h5>Rubina</h5>
+                <div class="card">
+                  <div class="card-body text-center">
+                   <img src="image/profile1.png" class="img-fluid">
+                    <div class="card-footer mt-3">
+                        <div class="btn-group d-flex justify-content-between">
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+                   <br><h5>Rubina</h5>
+                <div class="card">
+                  <div class="card-body text-center">
+                   <img src="image/profile3.png" class="img-fluid">
+                    <div class="card-footer mt-3">
+                        <div class="btn-group d-flex justify-content-between">
+                          <button type="button" class="btn btn-outline-dark">Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark">Share</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+          <div class="card">
+            <h2 class="text-center">2020</h2>
+            <img src="image/profile3.png" height ="200px">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold text-center">Your Collection</p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <h2 class="text-center">2019</h2>
+            <img src="image/profile1.png" height ="200px">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold text-center">Your Collection</p>
+            </div>
+          </div>
+          <br>
+           <div class="card">
+            <h2 class="text-center">2018</h2>
+            <img src="image/profile1.png" height ="200px">
+            <div class="card-body text-center">
+              <p class="card-title font-weight-bold text-center">Your Collection</p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <h2 class="text-center mt-3">2017</h2>
+            <div class="card-body">
+              <h3 class="card-title text-center">Joined XYZ Page</h3>
+              <h2 class="text-center">WELCOME</h2>
+            </div>
+          </div>
+        </div>
+         
+        </div>
+
+
+
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+            
+          </div>
+      </div>
+    </div>
+
    <script type="text/javascript">
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
@@ -139,10 +259,10 @@
     </script>
 
     <footer class="page-footer pt-4 bg-dark text-light">
-        <div class="container-fluid text-center text-md-left">
+        <div class="container text-center text-md-left">
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
-                    <h3 class="text-center">ABOUT US</h3>
+                    <h3>ABOUT US</h3>
                     <p>
                        XYZ is a one of the social media connecting the people of different background. 
                        XYZ is having the feature of ease-use-interface. For any query and help please visit to mentioned useful links or directly contact with the customer care section. NOTE: Please only post geninue and related posts. If found temporarily suspended from this platform.
@@ -153,14 +273,15 @@
                     <h3>Useful Links</h3>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="#" class=>Services</a>
+                        <a href="{{ route('services') }}" class=>Services</a>
                       </li>
                       <li>
-                        <a href="#">Privacy and Policy</a>
+                        <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>
                       </li>
                       <li>
-                        <a href="#">Terms and Conditions</a>
+                        <a href="{{ route('termcondition') }}">Terms and Conditions</a>
                       </li>
+                    </ul>
                   </div>
                  
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-3">
@@ -169,13 +290,13 @@
 
                     <ul class="list-unstyled">
                       <li>
-                        <a href="#!">Help</a>
+                        <a href="{{ route('help') }}">Help</a>
                       </li>
                       <li>
-                        <a href="#!">xyz@gmail.com</a>
+                        <a href="#">xyz@gmail.com</a>
                       </li>
                     <li>
-                        <a href="">Customer Care</a>
+                        <a href="{{ route('customercare') }}">Customer Care</a>
                     </li>
                     </ul>
                   </div>

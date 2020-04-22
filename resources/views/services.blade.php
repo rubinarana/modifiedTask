@@ -31,58 +31,19 @@
               </div>
            </div>
       </nav>
-<div class="container login-container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  login-form-1 bg-dark shadow p-5 mb-5 bg-white rounded" style="background-color:#292b2c !important;">
-                    <h3 class="text-center text-light">Login</h3>
-                    <hr style="background-color: #FFFFFF";>
-                    <form>
-                        <div class="form-group">
-                            <i class="fa fa-envelope fa-2x text-light"></i>&nbsp;
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                        </div><br>
-                        <div class="form-group">
-                            <i class="fa fa-lock fa-2x text-light"></i>&emsp;
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                        </div><br>
-                        <div class="form-group">
-                            <button class="btn btn-outline-light">LOGIN</button>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 login-form-2 bg-light shadow p-5 mb-5 bg-white rounded" style="background-color:white; !important;">
-                    <h3 class="text-center">Create New</h3>
-                     <hr style="background-color: #000000";>
-                    <form>
-                        <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Gender *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Re-Enter Password *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <h6></h6>
-                        </div>
-                         <div class="form-group">
-                            <button class="btn btn-outline-secondary">SUBMIT</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div class="container mt-5">
+    <p>Throughout the years, generations of gardeners enjoyed receiving the colorful spring and fall catalogs that featured unusual and exquisite plants. Our plants can be found in gardens throughout the country.</p>
+
+    <p>Today, Rubina Nursery continues to operate in kathmandu City. Our team of researchers and horticulturists devote their time to finding new and exciting plants that’ll perform in gardens throughout the country. Our garden team visits plant breeders, universities, public gardens and trade shows to find plants that perform well and will make your garden look its best. We also maintain test gardens where we trial many new varieties.</p>
+
+    <p>To bring you the newest and best choice of plants, we recently moved our operations from a catalog-based operation to a primarily web-based one. Our website enables us to show many more offerings—and immediately update you about new plants. We still offer limited print publications.</p>
+
+    <p>As always, you can count on Rubina Nursery to bring you top-quality plants. With each order, you’ll receive our free planting guide and planting instructions. And, all of our plants are backed by our No-Risk Guarantee.</p>
+
+    <p>Order with complete confidence. We guarantee all of our plants, trees, and bulbs to be true to name and select only the finest quality. If you are not pleased with any purchase, please call us at <a href="9860294884">9860294884</a> or email us at<a href="service@nursey.com">xyz@gmail.com</a> and our Customer Service representatives will be happy to help you. We look forward to being part of your gardening success and we want you, our customer, to be completely satisfied.We will look forward to continuing to supply gardens also with top-performing, unique plants and supplies.</p>
+
+    <p>Have another question? Return to the Customer Service Help page or send an e-mail directly to Customer Service</p>
+</div>
 
         <footer class="page-footer pt-4 bg-dark text-light">
         <div class="container text-center text-md-left">
@@ -95,11 +56,11 @@
                     </p>
                 </div>
 
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-md-0 mb-3">
+               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-md-0 mb-3">
                     <h3>Useful Links</h3>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="{{ route('services') }}">Services</a>
+                        <a href="{{ route('services') }}" class=>Services</a>
                       </li>
                       <li>
                         <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>

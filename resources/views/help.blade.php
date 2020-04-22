@@ -31,58 +31,16 @@
               </div>
            </div>
       </nav>
-<div class="container login-container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  login-form-1 bg-dark shadow p-5 mb-5 bg-white rounded" style="background-color:#292b2c !important;">
-                    <h3 class="text-center text-light">Login</h3>
-                    <hr style="background-color: #FFFFFF";>
-                    <form>
-                        <div class="form-group">
-                            <i class="fa fa-envelope fa-2x text-light"></i>&nbsp;
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
-                        </div><br>
-                        <div class="form-group">
-                            <i class="fa fa-lock fa-2x text-light"></i>&emsp;
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                        </div><br>
-                        <div class="form-group">
-                            <button class="btn btn-outline-light">LOGIN</button>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 login-form-2 bg-light shadow p-5 mb-5 bg-white rounded" style="background-color:white; !important;">
-                    <h3 class="text-center">Create New</h3>
-                     <hr style="background-color: #000000";>
-                    <form>
-                        <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Gender *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Re-Enter Password *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <h6></h6>
-                        </div>
-                         <div class="form-group">
-                            <button class="btn btn-outline-secondary">SUBMIT</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div class="container mt-5">
+    <h3>USER GUIDES</h3>
+       <p>The plant you ordered from Rubina Nursery will arrive in a box or container.Check box for damage. Report damaged box to Customer service number:<a href="#contact">98602894884</a>
+          Open the box by cutting all the tape, so when you remove the plant(s) it will not catch on an unopened part of the box and be damaged.Remove plant(s) from box carefully so you do not pull off any plant identification tags.
+          Carefully open bag that covers the root system or pot and check for moisture with your fingers. If it is dry, sprinkle with water.Plant immediately.
+
+      <p>Open the plastic wrapper that contains the pot. Replenish the moisture every other day until planted. Do not over water, but do not let roots dry out. Keep the plants out of extreme heat and cold. Store the plant in an area where it will receive partial shade during the day and place in an area such as a garage where it will not freeze at night.
+          Water the plant thoroughly after planting to settle the soil around the roots. Do not let plant roots dry out at any time. Your plants will need regular rain or watering each week to optimize survival and healthy growth.</p>
+      <p>Keep your plantings free of weeds.</p>
+          </div>
 
         <footer class="page-footer pt-4 bg-dark text-light">
         <div class="container text-center text-md-left">
@@ -99,7 +57,7 @@
                     <h3>Useful Links</h3>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="{{ route('services') }}">Services</a>
+                        <a href="{{ route('services') }}" class=>Services</a>
                       </li>
                       <li>
                         <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>

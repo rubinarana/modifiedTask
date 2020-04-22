@@ -18,4 +18,24 @@ class Newcontroller extends Controller
    {
    		return view('home');
    }
+   public function termcondition()
+   {
+      return view('termcondition');
+   }
+     public function help()
+   {
+      return view('help');
+   }
+     public function customercare()
+   {
+      return view('customercare');
+   }
+      public function services()
+   {
+      return view('services');
+   }
+      public function privacypolicy()
+   {
+      return view('privacypolicy');
+   }
 }
