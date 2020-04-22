@@ -1,0 +1,20 @@
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+.login-container form{
+    padding: 10%;
+}
+.login-form-2 .ForgetPwd{
+    color: #292b2c;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-2{
+    background: #0062cc;
+}

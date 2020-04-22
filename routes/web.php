@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/profile','profile'); 
+Route::get('/create','Newcontroller@create')->name('create');
+Route::get('/profile','Newcontroller@profile')->name('profile');
+Route::get('/home','Newcontroller@index')->name('home');

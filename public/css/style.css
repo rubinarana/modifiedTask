@@ -1,11 +1,23 @@
 *{
 	text-align: justify;
 }
+section{
+	background-image: url('profile.png');
+}
 .logostyle{
 	width: 40px;
 }
 #navbarid li a{
 	text-align: center;
+}
+.page-footer{
+	margin-top: 15px; 
+}
+.page-footer li a{
+	color: white;
+}
+.page-footer li a:hover{
+	color: white;
 }
 .media{
 	display: flex;

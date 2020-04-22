@@ -34,11 +34,15 @@
                         </form>
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link" title="Home" data-toggle="tooltip" data-placement="top"><i class="fa fa-home fa-2x"></i></a>
+                        <a href="{{ route('home') }}" class="nav-link" title="Home" data-toggle="tooltip" data-placement="top"><i class="fa fa-home fa-2x"></i></a>
                     </li>
 
                     <li class="nav-item">
                         <a href="#" class="nav-link" title="Message" data-toggle="tooltip" data-placement="top"><i class="fa fa-commenting fa-2x"></i></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" title="Request" data-toggle="tooltip" data-placement="top"><i class="fa fa-smile-o fa-2x"></i></a>
                     </li>
 
                      <li class="nav-item">
@@ -49,7 +53,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-2x"></i></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header"><a href="#" class="dropdown-item">Log Out</a></li>
-                            <li class="dropdown-header"><a href="#" class="dropdown-item">View Profile</a></li>
+                            <li class="dropdown-header"><a href="{{ route('profile') }}" class="dropdown-item">View Profile</a></li>
                         </ul>
                     </li>
 
@@ -97,16 +101,17 @@
                                 Following <span class="badge badge-light">7</span>
                             </button>
                              <button type="button" class="btn btn-info">
-                                Posts <span class="badge badge-light">7</span>
+                                Posts <span class="badge badge-light"></span>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-        
     </div>
    <hr><br>
    <div>
+
+    
 
 <div class="footer" style="overflow: hidden;">
     <div class="row">
@@ -131,7 +136,54 @@
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
-
     </script>
+
+    <footer class="page-footer pt-4 bg-dark text-light">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
+                    <h3 class="text-center">ABOUT US</h3>
+                    <p>
+                       XYZ is a one of the social media connecting the people of different background. 
+                       XYZ is having the feature of ease-use-interface. For any query and help please visit to mentioned useful links or directly contact with the customer care section. NOTE: Please only post geninue and related posts. If found temporarily suspended from this platform.
+                    </p>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-md-0 mb-3">
+                    <h3>Useful Links</h3>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" class=>Services</a>
+                      </li>
+                      <li>
+                        <a href="#">Privacy and Policy</a>
+                      </li>
+                      <li>
+                        <a href="#">Terms and Conditions</a>
+                      </li>
+                  </div>
+                 
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-3">
+
+                    <h3>Contact</h3>
+
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#!">Help</a>
+                      </li>
+                      <li>
+                        <a href="#!">xyz@gmail.com</a>
+                      </li>
+                    <li>
+                        <a href="">Customer Care</a>
+                    </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <hr style="background-color: #FFFFFF">
+              <div class="footer-copyright text-center py-3">&copy; 2020 Copyright:2020
+              </div>
+            </footer>
 </body>
-</html>
+</html> 
