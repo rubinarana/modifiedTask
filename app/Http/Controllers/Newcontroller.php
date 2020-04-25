@@ -12,11 +12,14 @@ class Newcontroller extends Controller
    }
    public function profile()
    {
-   		return view('profile');
+   		$user = auth()->user();
+         return view('profile')->with('user',$user);
    }
     public function index()
    {
-   		return view('home');
+         $user = auth()->user();
+         // dd($user);
+   		return view('home')->with('user',$user);
    }
    public function termcondition()
    {
@@ -38,4 +41,5 @@ class Newcontroller extends Controller
    {
       return view('privacypolicy');
    }
+   
 }

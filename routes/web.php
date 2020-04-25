@@ -13,16 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// }); this is loading welcome.blade directly on root path (/) 
 
-Route::get('/create','Newcontroller@create')->name('create');
 Route::get('/profile','Newcontroller@profile')->name('profile');
-Route::get('/home','Newcontroller@index')->name('home');
+
 Route::get('/termcondition','Newcontroller@termcondition')->name('termcondition');
 Route::get('/help','Newcontroller@help')->name('help');
 Route::get('/customercare','Newcontroller@customercare')->name('customercare');
 Route::get('/services','Newcontroller@services')->name('services');
 Route::get('/privacypolicy','Newcontroller@privacypolicy')->name('privacypolicy');
+//Route::post('/home','UserEntries@submit')->name('customlogin');
 
+Auth::routes();
+Route::get('/home', 'Newcontroller@index')->name('home');
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/{username}','IndexController@show');

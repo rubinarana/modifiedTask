@@ -5,8 +5,8 @@
   <title>create</title>
 </head>
 <body>
-  <link rel="stylesheet" type="text/css" href="css/onlyCreate.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/myCreate.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -36,48 +36,101 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  login-form-1 bg-dark shadow p-5 mb-5 bg-white rounded" style="background-color:#292b2c !important;">
                     <h3 class="text-center text-light">Login</h3>
                     <hr style="background-color: #FFFFFF";>
-                    <form>
+
+                     <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
                         <div class="form-group">
-                            <i class="fa fa-envelope fa-2x text-light"></i>&nbsp;
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control">
+
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div><br>
+
                         <div class="form-group">
-                            <i class="fa fa-lock fa-2x text-light"></i>&emsp;
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
-                        </div><br>
+                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
                         <div class="form-group">
-                            <button class="btn btn-outline-light">LOGIN</button>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="ForgetPwd">Forget Password?</a>
-                        </div>
+                            <button type="submit" class="btn btn-outline-secondary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
                     </form>
                 </div>
+
                 <div class="col-xl-6 col-lg-6 col-md-6 login-form-2 bg-light shadow p-5 mb-5 bg-white rounded" style="background-color:white; !important;">
                     <h3 class="text-center">Create New</h3>
                      <hr style="background-color: #000000";>
-                    <form>
+                     <form method="POST" action="{{ route('register') }}">
+                        @csrf
+
                         <div class="form-group d-flex">
-                            <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+          
+                        <div class="form-group">
+                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                          <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Gender *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password *" value="" />
-                        </div>
-                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Re-Enter Password *" value="" />
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
                         </div>
                         <div class="form-group">
                             <h6></h6>
                         </div>
                          <div class="form-group">
-                            <button class="btn btn-outline-secondary">SUBMIT</button>
+                              <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
                         </div>
                     </form>
                 </div>

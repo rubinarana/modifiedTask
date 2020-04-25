@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- jQuery library -->
@@ -52,7 +52,7 @@
                     <li class="nav-item dropdown active" title="Profile" data-toggle="tooltip" data-placement="top">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-2x"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-header"><a href="#" class="dropdown-item">Log Out</a></li>
+                            <li class="dropdown-header"><a href="{{ route('logout') }}" class="dropdown-item">Log Out</a></li>
                             <li class="dropdown-header"><a href="{{ route('profile') }}" class="dropdown-item">View Profile</a></li>
                         </ul>
                     </li>
@@ -74,7 +74,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1 class="text-center">Rubina Rana</h1><br>
+                    <h1 class="text-center">{{ $user->name }}</h1><br>
                          <div class="d-flex justify-content-center">
                              <i class="fa fa-map-marker fa-2x"></i>&emsp;&emsp;
                                    <p> Handigaun, Kathmandu</p>
@@ -87,7 +87,7 @@
                         
                          <div class="d-flex justify-content-center">
                              <i class="fa fa-envelope fa-2x"></i>&emsp;
-                                <a href="#" target="_blank">rubinaranamgr@gmail.com</a>
+                                <a href="#" target="_blank">{{ $user->email }}</a>
                         </div>
 
                         
@@ -95,10 +95,10 @@
                         <hr style="border: 0px;height: 60px; width: 100%; background-image: url(image/type_7.png);background-repeat:repeat-x;">
                         <div class="d-flex justify-content-around">
                             <button type="button" class="btn btn-success">
-                                Friends <span class="badge badge-light">4</span>
+                                Followers <span class="badge badge-light">{{ $user->followers->count() }}</span>
                             </button>
                             <button type="button" class="btn btn-danger">
-                                Following <span class="badge badge-light">7</span>
+                                Following <span class="badge badge-light">{{ $user->following->count() }}</span>
                             </button>
                              <button type="button" class="btn btn-info"><a href=""></a>
                                 Posts <span class="badge badge-light"></span>
@@ -273,7 +273,7 @@
                     <h3>Useful Links</h3>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="{{ route('services') }}" class=>Services</a>
+                        <a href="{{ route('services') }}" >Services</a>
                       </li>
                       <li>
                         <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>

@@ -1,0 +1,51 @@
+*{
+	text-align: justify;
+}
+section{
+	background-image: url('profile.png');
+}
+.logostyle{
+	width: 40px;
+}
+#navbarid li a{
+	text-align: center;
+}
+.page-footer{
+	margin-top: 15px; 
+}
+.page-footer li a{
+	color: white;
+}
+.page-footer li a:hover{
+	color: white;
+}
+.media{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.media a{
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	background-color: #f5f6fa;
+	text-align: center;
+	margin: 10px;
+	box-shadow: 1px 4px 2px 2px #dcdde1;
+	line-height: 120px;
+}
+.media a i{
+	transition: all 0.3s linear;
+}
+.media a:hover i{
+	transform: scale(1.4);
+}
+.fa-github{
+	color: black;
+}
+.fa-linkedin{
+	color:  #2B60DE;
+}
+.fa-facebook{
+	color: blue;
+}
