@@ -6,9 +6,15 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+     public function index()
+     {
+        $user = auth()->user();
+        return view('welcome')->with('user',$user);
+     }
+
     public function show($username)
     {
-    	$user= \App\User::with('following','followers')->where('username',$username)->first();
+    	$user= \App\User::with('following','followers','posts')->where('username',$username)->first();
 
     	if(!$user) {
     		return response('User not found', 404);
@@ -16,7 +22,8 @@ class IndexController extends Controller
 
     	$followers= $user->followers;
     	$following= $user->following;
-    	
+        $posts=$user->posts;
+
     	return view('profile')->with(['user'=>$user]);
     }
 }

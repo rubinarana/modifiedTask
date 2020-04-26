@@ -33,7 +33,7 @@ class FollowerSeeder extends Seeder
         	'follower_id' =>2
         ]);
         \App\Follower::create([
-        	'user_id' =>3,
+        	'user_id' =>202,
         	'follower_id' =>2
         ]);
     }

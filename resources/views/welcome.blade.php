@@ -11,6 +11,9 @@
 
         <!-- Styles -->
         <style>
+        *{
+            color:#ffffff;
+        }
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -22,7 +25,9 @@
 
             .full-height {
                 height: 100vh;
-                background-image: url('image/login.png');
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-image:linear-gradient(rgb(0,0,0,0.9),rgb(0,0,0,0)),url('image/home.jpg');
             }
 
             .flex-center {
@@ -46,11 +51,15 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 54px;
+            }
+            .body{
+                font-size: 20px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #FFFFFF;
+                /*color: #636b6f;*/
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -82,23 +91,24 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    WELCOME
+                    WELCOME TO XYZ_PAGE
                 </div>
-
+                <p class="body">Where You Can Connect With People Globally</p>
+                    
                 <div class="links">
-                 <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                    <div class="container">
+                 <a href="{{ route('services') }}">Services</a>
+                    <a href="{{ route('privacypolicy') }}">Policy</a>
+                    <a href="{{ route('termcondition') }}">Terms</a>
+                    <a href="#">Blog</a>
+                    <a href="{{ route('customercare') }}">Customer Care</a>
+                    <a href="#">Contact</a>
+                    {{-- <div class="container">
                         <div class="row">
                             <span>User: {{ $user->name }}</span>
                             <span>Following:{{ $user->following->count() }}</span>
                             <span>Followers:{{ $user->followers->count() }}</span>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

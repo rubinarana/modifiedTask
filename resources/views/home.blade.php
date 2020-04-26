@@ -96,7 +96,7 @@
         <br>
           <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
               <button class="btn btn-success" data-target="#mymodal" data-toggle="modal">
-                  <span>Share Thought With Others.</span>
+                  <span>Hello {{ $user->name }} Share Thought With Others.</span>
               </button>
 
               <div id="mymodal" class="modal fade">

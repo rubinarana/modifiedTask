@@ -74,15 +74,29 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                    <h1 class="text-center">{{ $user->name }}</h1><br>
+
+                  <div class="d-flex justify-content-center">
+                      @if (Auth::User() != $user)
+                      
+                        <h4 class="text-center"> {{ $user->name }} </h4>&emsp;
+                        <button type="button" class="btn btn-secondary">
+                            Follow 
+                        </button>    
+                        @else   
+                            <h4 class="text-center">{{ $user->name }}</h4>&emsp;
+                        
+                        @endif
+                      </div>
+                        <br>
+      
                          <div class="d-flex justify-content-center">
                              <i class="fa fa-map-marker fa-2x"></i>&emsp;&emsp;
-                                   <p> Handigaun, Kathmandu</p>
+                                   <p> {{ $user->address }}</p>
                         </div><br>
 
                         <div class="d-flex justify-content-center">
                              <i class="fa fa-phone-square fa-2x"></i>&emsp;
-                                <p>9860294884 / 9803208339</p>
+                                <p>{{ $user->phone }}</p>
                         </div><br>
                         
                          <div class="d-flex justify-content-center">
@@ -101,7 +115,7 @@
                                 Following <span class="badge badge-light">{{ $user->following->count() }}</span>
                             </button>
                              <button type="button" class="btn btn-info"><a href=""></a>
-                                Posts <span class="badge badge-light"></span>
+                                Posts <span class="badge badge-light">{{ $user->posts->count() }}</span>
                             </button>
                         </div>
                     </div>
@@ -115,7 +129,7 @@
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <div class="container">
             <h2 class="text-center">About</h2><br>
-                <p>I am Rubina Rana. I am student and currently doing my bachelors degree in Bsc. CSIT(Computer Science and Internet Technology) from Asian College Of Higher Studies. Beside this, I love sports and do some sketches during my free time.</p> 
+                <p>{{ $user->about }}</p> 
             </div>
         </div>
 
@@ -137,7 +151,16 @@
               <div class="container">
                 <div class="card">
                   <div class="card-body text-center">
-                   <img src="image/profile1.png" class="img-fluid">
+
+                    
+                    {{ $user->post }}
+                {{--      @foreach($posts as $post)
+                  <tr>
+                    <td>{{ $post->id }}</td>
+                    <td>{{ $post->title }}</td>
+                    <td>{{ $post->body}}</td>
+                </tr>
+                @endforeach --}}
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
                           <button type="button" class="btn btn-outline-dark">Like</button>
