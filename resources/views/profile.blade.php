@@ -34,23 +34,40 @@
                         </form>
                     
                     <li class="nav-item">
-                        <a href="{{ route('home') }}" class="nav-link" title="Home" data-toggle="tooltip" data-placement="top"><i class="fa fa-home fa-2x"></i></a>
+                        <a href="{{ route('home') }}" class="nav-link" title="Home" data-toggle="tooltip" data-placement="left"><i class="fa fa-home fa-2x"></i></a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" title="Message" data-toggle="tooltip" data-placement="top"><i class="fa fa-commenting fa-2x"></i></a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" title="Request" data-toggle="tooltip" data-placement="top"><i class="fa fa-smile-o fa-2x"></i></a>
-                    </li>
-
-                     <li class="nav-item">
-                        <a href="#" class="nav-link" title="Notification" data-toggle="tooltip" data-placement="top"><i class="fa fa-bell-o fa-2x"></i></a>
+                     <li class="nav-item dropdown" title="Message" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="fa fa-comments-o fa-2x"></i></a>
+                             <ul class="dropdown-menu">
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Message1</a></li>
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Message2</a></li>
+                            </ul>
                     </li>
 
-                    <li class="nav-item dropdown active" title="Profile" data-toggle="tooltip" data-placement="top">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-2x"></i></a>
+                    <li class="nav-item dropdown" title="Request" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="fa fa-smile-o fa-2x"></i></a>
+                             <ul class="dropdown-menu">
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Friend_Request1</a></li>
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Friend_Request2</a></li>
+                            </ul>
+                    </li>
+
+                    <li class="nav-item dropdown" title="Notification" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="fa fa-bell-o fa-2x"></i></a>
+                             <ul class="dropdown-menu">
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Notification1</a></li>
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Notification2</a></li>
+                            </ul>
+                    </li>
+
+                    <li class="nav-item dropdown active" title="Profile" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                          <img src="image/profile1.png"></a>
+                       
                         <ul class="dropdown-menu">
                             <li class="dropdown-header"><a href="{{ route('logout') }}" class="dropdown-item">Log Out</a></li>
                             <li class="dropdown-header"><a href="{{ route('profile') }}" class="dropdown-item">View Profile</a></li>
@@ -58,7 +75,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link" title="Settings" data-toggle="tooltip" data-placement="top"><i class="fa fa-cogs fa-2x"></i></a>
+                        <a href="#" class="nav-link" title="Settings" data-toggle="tooltip" data-placement="left"><i class="fa fa-cogs fa-2x"></i></a>
                     </li>
                 </ul>
             </div>
@@ -76,16 +93,23 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 
                   <div class="d-flex justify-content-center">
-                      @if (Auth::User() != $user)
-                      
+                  
+                    @if (Auth::User() != $user)
+                    {
                         <h4 class="text-center"> {{ $user->name }} </h4>&emsp;
                         <button type="button" class="btn btn-secondary">
-                            Follow 
-                        </button>    
-                        @else   
-                            <h4 class="text-center">{{ $user->name }}</h4>&emsp;
-                        
-                        @endif
+                                    Follow 
+                        </button> 
+                        }  
+                    @else   
+                    {
+                        <h4 class="text-center"> {{ $user->name }} </h4>&emsp;
+                      }
+                    @endif
+
+
+
+
                       </div>
                         <br>
       
@@ -149,18 +173,14 @@
       <div class="row mt-5">
          <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
               <div class="container">
+
+                 @foreach($user->posts as $posts)
                 <div class="card">
                   <div class="card-body text-center">
-
-                    
-                    {{ $user->post }}
-                {{--      @foreach($posts as $post)
-                  <tr>
-                    <td>{{ $post->id }}</td>
-                    <td>{{ $post->title }}</td>
-                    <td>{{ $post->body}}</td>
-                </tr>
-                @endforeach --}}
+                    <tr>
+                      <td>{{ $posts->title }}</td>
+                      <td>{{ $posts->body}}</td>
+                    </tr>
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
                           <button type="button" class="btn btn-outline-dark">Like</button>
@@ -170,20 +190,7 @@
                     </div>
                   </div>
                 </div>
-
-                  <br><h5>Rubina</h5>
-                <div class="card">
-                  <div class="card-body text-center">
-                   <img src="image/login.png" class="img-fluid">
-                    <div class="card-footer mt-3">
-                        <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-outline-dark">Like</button>
-                          <button type="button" class="btn btn-outline-dark">Comment</button>
-                          <button type="button" class="btn btn-outline-dark">Share</button>
-                        </div>
-                    </div>
-                  </div>
-                </div>
+                 @endforeach
 
                     <br><h5>Rubina</h5>
                 <div class="card">
@@ -264,16 +271,8 @@
             </div>
           </div>
         </div>
-         
-        </div>
-
-
-
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
-            
-          </div>
       </div>
-    </div>
+  </div>
 
    <script type="text/javascript">
         $(document).ready(function(){

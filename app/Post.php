@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use App\Reaction;
 
 class Post extends Model
 {
@@ -11,4 +12,9 @@ class Post extends Model
    {
    		return $this->belongsTo(User::class);
    }
+    public function reactions()
+    {
+      return $this->belongsTo(Reaction::class);
+    }
+    
 }

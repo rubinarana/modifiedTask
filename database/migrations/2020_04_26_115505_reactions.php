@@ -1,10 +1,10 @@
-<?php
+ <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Posts extends Migration
+class Reactions extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+         Schema::create('reactions', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('user_id');
-            $table->string('title');
-            $table->text('body');
-            
+            $table->unsignedBigInteger('user_id'); // on user table
+            $table->unsignedBigInteger('post_id'); // on post table
+            $table->boolean('like');
             $table->timestamps();
-            $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('post_id')->references('id')->on('posts');
         });
     }
 
@@ -33,6 +32,6 @@ class Posts extends Migration
      */
     public function down()
     {
-         Schema::dropIfExists('posts');
+        Schema::dropIfExists('reactions');
     }
 }

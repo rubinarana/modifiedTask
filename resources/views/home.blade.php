@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,33 +33,50 @@
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                           </form>
                       
-                      <li class="nav-item">
-                          <a href="{{ route('home') }}" class="nav-link" title="Home" data-toggle="tooltip" data-placement="top"><i class="fa fa-home fa-2x"></i></a>
-                      </li>
+                     <li class="nav-item">
+                        <a href="{{ route('home') }}" class="nav-link" title="Home" data-toggle="tooltip" data-placement="left"><i class="fa fa-home fa-2x"></i></a>
+                    </li>
 
-                      <li class="nav-item">
-                          <a href="#" class="nav-link" title="Message" data-toggle="tooltip" data-placement="top"><i class="fa fa-commenting fa-2x"></i></a>
-                      </li>
-                      
-                      <li class="nav-item">
-                          <a href="#" class="nav-link" title="Request" data-toggle="tooltip" data-placement="top"><i class="fa fa-smile-o fa-2x"></i></a>
-                      </li>
+                     <li class="nav-item dropdown" title="Message" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="fa fa-comments-o fa-2x"></i></a>
+                             <ul class="dropdown-menu">
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Message1</a></li>
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Message2</a></li>
+                            </ul>
+                    </li>
 
-                       <li class="nav-item">
-                          <a href="#" class="nav-link" title="Notification" data-toggle="tooltip" data-placement="top"><i class="fa fa-bell-o fa-2x"></i></a>
-                      </li>
+                    <li class="nav-item dropdown" title="Request" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="fa fa-smile-o fa-2x"></i></a>
+                             <ul class="dropdown-menu">
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Friend_Request1</a></li>
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Friend_Request2</a></li>
+                            </ul>
+                    </li>
 
-                      <li class="nav-item dropdown active" title="Profile" data-toggle="tooltip" data-placement="top">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user fa-2x"></i></a>
-                          <ul class="dropdown-menu">
-                              <li class="dropdown-header"><a href="{{ route('logout') }}" class="dropdown-item">Log Out</a></li>
-                              <li class="dropdown-header"><a href="{{ route('profile') }}" class="dropdown-item">View Profile</a></li>
-                          </ul>
-                      </li>
+                    <li class="nav-item dropdown" title="Notification" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="fa fa-bell-o fa-2x"></i></a>
+                             <ul class="dropdown-menu">
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Notification1</a></li>
+                                <li class="dropdown-header"><a href="#" class="dropdown-item">Notification2</a></li>
+                            </ul>
+                    </li>
 
-                      <li class="nav-item">
-                          <a href="#" class="nav-link" title="Settings" data-toggle="tooltip" data-placement="top"><i class="fa fa-cogs fa-2x"></i></a>
-                      </li>
+                    <li class="nav-item dropdown active" title="Profile" data-toggle="tooltip" data-placement="left">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                          <img src="image/profile1.png"></a>
+                       
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header"><a href="{{ route('logout') }}" class="dropdown-item">Log Out</a></li>
+                            <li class="dropdown-header"><a href="{{ route('profile') }}" class="dropdown-item">View Profile</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" title="Settings" data-toggle="tooltip" data-placement="left"><i class="fa fa-cogs fa-2x"></i></a>
+                    </li>
                   </ul>
               </div>
            </div>
@@ -69,7 +86,7 @@
     <div class="container">
       <div class="row mt-3">
         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
-          <div class="card">
+          <div class="card" style="position: sticky; top: 0;">
             <img src="image/profile3.png" height ="100px">
             <div class="card-body text-center">
               <p class="card-title font-weight-bold">Web Developer Wanter</p>
@@ -77,7 +94,7 @@
             </div>
           </div>
           <br>
-          <div class="card">
+          <div class="card" style="position: sticky; top: 0;">
             <img src="image/profile1.png" height ="100px">
             <div class="card-body text-center">
               <p class="card-title font-weight-bold">Java Developer Wanter</p>
@@ -85,7 +102,7 @@
             </div>
           </div>
           <br>
-          <div class="card">
+          <div class="card" style="position: sticky; top: 0;">
             <img src="image/profile.png" height ="100px">
             <div class="card-body text-center">
               <p class="card-title font-weight-bold">Network Engineer Wanter</p>
@@ -95,6 +112,8 @@
         </div>
         <br>
           <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+
+
               <button class="btn btn-success" data-target="#mymodal" data-toggle="modal">
                   <span>Hello {{ $user->name }} Share Thought With Others.</span>
               </button>
@@ -105,15 +124,23 @@
                   <!-- Modal content-->
                   <div class="modal-content">
                       <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                            <br>
-                            <input type="text" name="" class="form-control" placeholder="Hey, want to share something.">
+                           <form action="{{URL::to('/store')}}" method="POST" enctype="multipart/form-data">
+                              <input type="text" name="body" class="form-control" placeholder="Hey, want to share something.">
+                            
                             <br>
                             <div class="d-flex justify-content-around">
-                                  <button type="button" class="btn btn-primary">
+                                  {{-- <button type="button" class="btn btn-primary">
                                       Photo
-                                  </button>
-                                  <button type="button" class="btn btn-success">
+                                  </button> --}}
+
+                                 {{--  <label for="image">Photo</label>
+                                  <input type="file" name="image">
+                                  <input type="hidden" name="_token" value="{{ csrf_token()
+                                  }}"> --}}
+
+                                {{--   <button type="button" class="btn btn-success">
                                       Video
                                   </button>
                                    <button type="button" class="btn btn-info">
@@ -124,8 +151,9 @@
                                   </button>
                                   <button type="button" class="btn btn-secondary">
                                       Story
-                                  </button>
+                                  </button> --}}
                               </div>
+                              </form>
                      </div>
                       <div class="modal-footer justify-content-center">
                         <button class="btn btn-danger" data-dismiss="modal">POST</button>
@@ -134,16 +162,43 @@
               </div>
               </div>
 
+              <button class="open-button"  onclick="openForm()">Online
+                <i class="fa fa-circle" style="color: green;"></i>
+              </button>
+                <div class="chat-popup" id="myForm">
+                  <form class="form-container">
+                    <div class="chatbox">
+                        <div class="d-flex justify-content-around">
+                              <i class="fa fa-user"></i>
+
+                              
+                               @foreach($user->followers as $follower)
+
+                                        {{ $follower->user->name }}
+                                
+                               @endforeach
+
+                              <i class="fa fa-circle" style="color: green;"></i>&emsp;&emsp;</p>
+                        </div>
+                    </div>
+
+                    <button class="btn cancel text-light" onclick="closeForm()">Close</button>
+                  </form>
+                </div>
+
               <div class="container">
 
+              {{-- <img src="{{ asset("storage/$post->image") }}"> --}}
                 <br><h5>Rubina</h5>
                 <div class="card">
                   <div class="card-body text-center">
                    <img src="image/profile1.png" class="img-fluid">
                     <div class="card-footer mt-3">
                         <div class="btn-group d-flex justify-content-between">
-                          <button type="button" class="btn btn-outline-dark">Like</button>
-                          <button type="button" class="btn btn-outline-dark">Comment</button>
+                          <button type="button" class="btn btn-outline-dark"> Like</button>
+                          <button type="button" class="btn btn-outline-dark">Comment
+                          </button> 
+      
                           <button type="button" class="btn btn-outline-dark">Share</button>
                         </div>
                     </div>
@@ -270,5 +325,14 @@
               <div class="footer-copyright text-center py-3">&copy; 2020 Copyright:2020
               </div>
             </footer>
+            <script>
+                function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+                }
+
+                function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+                }
+                </script>
 </body>
 </html> 

@@ -41,5 +41,9 @@ class Newcontroller extends Controller
    {
       return view('privacypolicy');
    }
-   
+   public function follower()
+   {
+      $user = auth()->user();
+      return view('follower')->with('user',$user);
+   }
 }

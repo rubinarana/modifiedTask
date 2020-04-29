@@ -21,10 +21,5 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-       //$user = auth()->user->with('following', 'followers');
-        //return view('profile')->with('user',$user);               //like select query
-        return view('profile');
-    }
+  
 }

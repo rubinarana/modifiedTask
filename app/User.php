@@ -46,7 +46,13 @@ class User extends Authenticatable
     }
      public function posts()
     {
-        return $this->hasMany(Post::class,'user_id');
+        return $this->hasMany(Post::class);
     }
-       
+       public function reactions(){
+      return $this->hasMany(Reaction::class);
+    }  
+      public function follows(User $user)
+    {
+        return Follower::where('user_id', $user->id)->where('follower_id', auth()->user()->id)->first() ? true : false; 
+    }
 }
