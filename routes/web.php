@@ -32,16 +32,24 @@ Route::post('/store', 'PostController@store');
 
 Route::view('/upload',"upload");
 
+//  Route Grouping
+Route::middleware(['auth'])->group(function() {
+    Route::get('/follower', 'HomeController@index')->name('follower');
 
+    Route::get('/users/list', 'Newcontroller@users');
 
-Route::post('/follow', 'FollowerController@follow')->name('follow');
-Route::post('/unfollow', 'FollowerController@unfollow')->name('unfollow');
+    Route::post('/follow', 'FollowerController@follow')->name('follow');
+    Route::post('/unfollow', 'FollowerController@unfollow')->name('unfollow');
 
-Route::get('/{username}','IndexController@show');
+});
 
 Auth::routes();
 Route::get('/home', 'Newcontroller@index')->name('home');
 Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/{username}','IndexController@show');
+
+
 
 
 // Route::post('/post','IndexController@show')->name('post');

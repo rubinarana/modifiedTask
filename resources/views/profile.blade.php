@@ -95,16 +95,27 @@
                   <div class="d-flex justify-content-center">
                   
                     @if (Auth::User() != $user)
-                    {
-                        <h4 class="text-center"> {{ $user->name }} </h4>&emsp;
-                        <button type="button" class="btn btn-secondary">
-                                    Follow 
-                        </button> 
-                        }  
+                    
+                        <h4 class="text-center"> {{$user->name}} </h4>&emsp;
+
+                         @if(auth()->user()->follows($user))
+                                    <form action="{{ route('unfollow') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{$user->id}}" name="user_id">
+                                        <button type="submit" class="btn btn-outline-secondary">Following</button>
+                                    </form>
+                               @else
+                                    <form action="{{ route('follow') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{$user->id}}" name="user_id">
+                                        <button type="submit" class="btn btn-secondary">Follow</button>
+                                    </form>
+                                    @endif
+                        
                     @else   
-                    {
+                    
                         <h4 class="text-center"> {{ $user->name }} </h4>&emsp;
-                      }
+                      
                     @endif
 
 
@@ -132,9 +143,10 @@
 
                         <hr style="border: 0px;height: 60px; width: 100%; background-image: url(image/type_7.png);background-repeat:repeat-x;">
                         <div class="d-flex justify-content-around">
+                            <a href="{{ route('follower') }}">
                             <button type="button" class="btn btn-success">
                                 Followers <span class="badge badge-light">{{ $user->followers->count() }}</span>
-                            </button>
+                            </button></a>
                             <button type="button" class="btn btn-danger">
                                 Following <span class="badge badge-light">{{ $user->following->count() }}</span>
                             </button>

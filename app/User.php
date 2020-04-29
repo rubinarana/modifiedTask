@@ -51,7 +51,7 @@ class User extends Authenticatable
        public function reactions(){
       return $this->hasMany(Reaction::class);
     }  
-      public function follows(User $user)
+     public function follows(User $user)
     {
         return Follower::where('user_id', $user->id)->where('follower_id', auth()->user()->id)->first() ? true : false; 
     }

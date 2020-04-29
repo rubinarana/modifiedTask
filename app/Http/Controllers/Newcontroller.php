@@ -44,6 +44,11 @@ class Newcontroller extends Controller
    public function follower()
    {
       $user = auth()->user();
+      
       return view('follower')->with('user',$user);
    }
+   public function users() {
+        $users = \App\User::paginate(10);
+        return view('users_view')->with('users', $users);
+    }
 }

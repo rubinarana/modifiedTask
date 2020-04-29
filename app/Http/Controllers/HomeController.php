@@ -21,5 +21,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+     public function index()
+    {
+        $user = \App\User::paginate(15);
+        return view('follower')->withUser($user);
+    }
   
 }

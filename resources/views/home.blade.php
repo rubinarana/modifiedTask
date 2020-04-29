@@ -41,6 +41,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                          <i class="fa fa-comments-o fa-2x"></i></a>
                              <ul class="dropdown-menu">
+                              <a href="#">See in mobile view</a>
                                 <li class="dropdown-header"><a href="#" class="dropdown-item">Message1</a></li>
                                 <li class="dropdown-header"><a href="#" class="dropdown-item">Message2</a></li>
                             </ul>

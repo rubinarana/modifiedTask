@@ -11,23 +11,25 @@ class FollowerController extends Controller
     {
         $user_id = $request->input('user_id');
 
-        $followers = Follower::firstOrCreate([
+        $follower = Follower::firstOrCreate([
             'user_id' => $user_id,
             'follower_id' => auth()->user()->id
         ]);
+
         return back();
     }
-      public function unfollow(Request $request) 
+
+    public function unfollow(Request $request) 
     {
         $user_id = $request->input('user_id');
 
-        $followers = Follower::where([
+        $follower = Follower::where([
             'user_id' => $user_id,
             'follower_id' => auth()->user()->id
         ])->first();
 
-        if($followers)
-            $followers->delete();
+        if($follower)
+            $follower->delete();
         
         return back();
         
