@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -29,9 +28,7 @@ class FollowerController extends Controller
         ])->first();
 
         if($follower)
-            $follower->delete();
-        
-        return back();
-        
+            $follower->delete();        
+        return back();   
     }
 }

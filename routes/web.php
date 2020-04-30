@@ -29,12 +29,14 @@ Route::get('/privacypolicy','Newcontroller@privacypolicy')->name('privacypolicy'
 Route::get('/follower','Newcontroller@follower')->name('follower');
 
 Route::post('/store', 'PostController@store');
+Route::get('/upload',"PostController@index");
+Route::get('/show',"PostController@show");
 
-Route::view('/upload',"upload");
 
 //  Route Grouping
 Route::middleware(['auth'])->group(function() {
     Route::get('/follower', 'HomeController@index')->name('follower');
+    Route::get('/following', 'HomeController@following')->name('following');
 
     Route::get('/users/list', 'Newcontroller@users');
 

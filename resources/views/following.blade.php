@@ -13,9 +13,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Follower</title>
+    <title>Following</title>
 </head>
 <body>
   <div class="background">
@@ -92,7 +90,7 @@
       </script>
 
 <div class="container mt-4">
-    <h2 class="text-center">Followers</h2>
+    <h2 class="text-center">Following</h2>
     <hr>
     <table class="table table-bordered mt-4">
                         <tr class="bg-dark text-light">

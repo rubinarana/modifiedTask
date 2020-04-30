@@ -26,5 +26,9 @@ class HomeController extends Controller
         $user = \App\User::paginate(15);
         return view('follower')->withUser($user);
     }
-  
+    //  public function following()
+    // {
+    //     $user = \App\User::paginate(15);
+    //     return view('following')->withUser($user);
+    // }
 }

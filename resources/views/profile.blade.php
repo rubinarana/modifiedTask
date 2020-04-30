@@ -147,10 +147,10 @@
                             <button type="button" class="btn btn-success">
                                 Followers <span class="badge badge-light">{{ $user->followers->count() }}</span>
                             </button></a>
-                            <button type="button" class="btn btn-danger">
+                            <a href="{{ route('following') }}"><button type="button" class="btn btn-danger">
                                 Following <span class="badge badge-light">{{ $user->following->count() }}</span>
-                            </button>
-                             <button type="button" class="btn btn-info"><a href=""></a>
+                            </button></a>
+                             <button type="button" class="btn btn-info">
                                 Posts <span class="badge badge-light">{{ $user->posts->count() }}</span>
                             </button>
                         </div>
