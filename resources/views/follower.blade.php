@@ -13,8 +13,11 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   {{--  
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> --}}
+     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <title>Follower</title>
 </head>
 <body>
@@ -91,7 +94,7 @@
           });
       </script>
 
-<div class="container mt-4">
+<div class="container mt-4" id="app">
     <h2 class="text-center">Followers</h2>
     <hr>
     <table class="table table-bordered mt-4">
@@ -119,7 +122,7 @@
                                         <span>{{ $follower->user->name }} </span>
                                     @endforeach
                                 </td> --}}
-                                <td>
+                                {{-- <td>
                                     @if(auth()->user()->follows($u))
                                     <form action="{{ route('unfollow') }}" method="POST">
                                         @csrf
@@ -135,67 +138,14 @@
                                     @endif
                                 </td>
                             </tr>
-                        @endforeach
+                        @endforeach --}}
+                        <td>
+                         <follow-unfollow v-bind:follows="{{ auth()->user()->follows($u) ? "true" : "false" }}" v-bind:user_id={{ $u->id}} ></follow-unfollow>
+                          </td>
+                        </tr>
+                      @endforeach
                     </table>
-                    {{ $user->links() }}
+                {{ $user->links() }}
 </div>
-
-    <footer class="page-footer pt-4 bg-dark text-light">
-        <div class="container text-center text-md-left">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mt-md-0 mt-3">
-                    <h3>ABOUT US</h3>
-                    <p>
-                       XYZ is a one of the social media connecting the people of different background. 
-                       XYZ is having the feature of ease-use-interface. For any query and help please visit to mentioned useful links or directly contact with the customer care section. NOTE: Please only post geninue and related posts. If found temporarily suspended from this platform.
-                    </p>
-                </div>
-
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-md-0 mb-3">
-                    <h3>Useful Links</h3>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="{{ route('services') }}" class=>Services</a>
-                      </li>
-                      <li>
-                        <a href="{{ route('privacypolicy') }}">Privacy and Policy</a>
-                      </li>
-                      <li>
-                        <a href="{{ route('termcondition') }}">Terms and Conditions</a>
-                      </li>
-                    </ul>
-                  </div>
-                 
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 mb-3">
-
-                    <h3>Contact</h3>
-
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="{{ route('help') }}">Help</a>
-                      </li>
-                      <li>
-                        <a href="#">xyz@gmail.com</a>
-                      </li>
-                    <li>
-                        <a href="{{ route('customercare') }}">Customer Care</a>
-                    </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <hr style="background-color: #FFFFFF">
-              <div class="footer-copyright text-center py-3">&copy; 2020 Copyright:2020
-              </div>
-            </footer>
-            <script>
-                function openForm() {
-                  document.getElementById("myForm").style.display = "block";
-                }
-
-                function closeForm() {
-                  document.getElementById("myForm").style.display = "none";
-                }
-                </script>
-            </body>
-            </html>
+</body>
+</html>

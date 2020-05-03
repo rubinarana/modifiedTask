@@ -15,6 +15,10 @@ class FollowerController extends Controller
             'follower_id' => auth()->user()->id
         ]);
 
+        if($request->ajax())
+            return response()->json([
+                'status' => 'success'
+            ]);
         return back();
     }
 
@@ -28,7 +32,11 @@ class FollowerController extends Controller
         ])->first();
 
         if($follower)
-            $follower->delete();        
+            $follower->delete();  
+        if($request->ajax())
+            return response()->json([
+                'status' => 'success'
+            ]);      
         return back();   
     }
 }

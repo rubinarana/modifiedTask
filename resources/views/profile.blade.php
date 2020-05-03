@@ -86,7 +86,20 @@
         <div class="row mt-5" id="aboutme" style="overflow: hidden;">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="image">
-                        <img src="image/profile1.png" class="img-fluid">
+                        <img src="image/profile1.png" class="img-fluid img-thumbnail">
+                        <div class="middle d-flex">
+                          <div class="dropdown mx-2">
+                                <button type="button" class="btn btn-danger" data-toggle="dropdown">
+                                  Edit
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Change</a>
+                                  <a class="dropdown-item" href="#">Remove</a>
+                                </div>  
+                          </div>
+                          <button class="btn btn-danger">View</button>
+
+                        </div>
                     </div>
                 </div>
 
@@ -98,7 +111,9 @@
                     
                         <h4 class="text-center"> {{$user->name}} </h4>&emsp;
 
+                        
                          @if(auth()->user()->follows($user))
+
                                     <form action="{{ route('unfollow') }}" method="POST">
                                         @csrf
                                         <input type="hidden" value="{{$user->id}}" name="user_id">

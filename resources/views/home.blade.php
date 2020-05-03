@@ -33,7 +33,7 @@
                                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                           </form>
                       
-                     <li class="nav-item">
+                     <li class="nav-item active">
                         <a href="{{ route('home') }}" class="nav-link" title="Home" data-toggle="tooltip" data-placement="left"><i class="fa fa-home fa-2x"></i></a>
                     </li>
 
@@ -65,7 +65,7 @@
                             </ul>
                     </li>
 
-                    <li class="nav-item dropdown active" title="Profile" data-toggle="tooltip" data-placement="left">
+                    <li class="nav-item dropdown" title="Profile" data-toggle="tooltip" data-placement="left">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                           <img src="image/profile1.png"></a>
                        
@@ -132,16 +132,10 @@
                             
                             <br>
                             <div class="d-flex justify-content-around">
-                                  {{-- <button type="button" class="btn btn-primary">
+                                  <button type="button" class="btn btn-primary">
                                       Photo
-                                  </button> --}}
-
-                                 {{--  <label for="image">Photo</label>
-                                  <input type="file" name="image">
-                                  <input type="hidden" name="_token" value="{{ csrf_token()
-                                  }}"> --}}
-
-                                {{--   <button type="button" class="btn btn-success">
+                                  </button>
+                                  <button type="button" class="btn btn-success">
                                       Video
                                   </button>
                                    <button type="button" class="btn btn-info">
@@ -152,7 +146,7 @@
                                   </button>
                                   <button type="button" class="btn btn-secondary">
                                       Story
-                                  </button> --}}
+                                  </button>
                               </div>
                               </form>
                      </div>

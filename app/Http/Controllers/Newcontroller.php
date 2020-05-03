@@ -41,4 +41,8 @@ class Newcontroller extends Controller
    {
       return view('privacypolicy');
    }
+     public function users() {
+        $users = \App\User::paginate(10);
+        return view('users_view')->with('users', $users);
+    }
 }

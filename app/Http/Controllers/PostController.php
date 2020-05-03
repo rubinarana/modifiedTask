@@ -22,14 +22,15 @@ class PostController extends Controller
     	{
     		return 'please select first';
     	}
+        return redirect('/profile');
     	// $path = $request->file('image')->store('upload');
     	// echo $path;
     }
 
-    public function show()
-    {
-    	$url= Storage::url('post.png');
-    	// return Storage::allFiles('public');
-    	return "<img src='".$url."'/>";
-    }
+    // public function show()
+    // {
+    // 	$url= Storage::url('post.png');
+    // 	// return Storage::allFiles('public');
+    // 	return "<img src='".$url."'/>";
+    // }
 }
